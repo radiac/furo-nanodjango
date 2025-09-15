@@ -1,0 +1,52 @@
+{%- extends "furo/base.html" -%}
+
+{%- block body -%}
+<nanodjango>
+  <nanodjango-header>
+    <div class="header-nav">
+      <div>
+        <h1><a href="https://nanodjango.dev/"><img src="{{ pathto('_static/logo.svg', 1) }}" alt="nanodjango"></a></h1>
+
+        <nav>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+          <label for="nav-toggle" class="toggle icon"></label>
+          <ul>
+            <li><a href="https://docs.nanodjango.dev/" class="active">docs</a></li>
+            <li><a href="https://nanodjango.dev/playground/">playground</a></li>
+            <li><a href="https://nanodjango.dev/blog/">blog</a></li>
+            <li><a href="https://github.com/radiac/nanodjango" target="_blank">github ↗</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    
+      <div class="subnav">
+        <div>
+          <div class="title">
+            
+          </div>
+          
+            <div class="links" id="subnav-links">
+            <!--
+              <nav>
+                <ul>
+                </ul>
+              </nav>
+            -->
+            </div>
+          
+        </div>
+      </div>
+    
+
+    
+  </nanodjango-header>
+</nanodjango>
+{{ super() }}
+{%- endblock -%}
+
+{%- block extra_styles -%}
+{{ super() }}
+<link rel="stylesheet" href="{{ pathto('_static/furo_nanodjango.css', 1) }}" type="text/css">
+{%- endblock -%}

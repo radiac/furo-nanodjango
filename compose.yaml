@@ -1,0 +1,11 @@
+services:
+  theme:
+    build: .
+    stdin_open: true
+    tty: true
+    working_dir: /project
+    volumes:
+      - .:/project
+    ports:
+      - "8000:8000"
+    command: sh -c "cd theme && pip install -e . && cd ../test-docs && sphinx-autobuild . _build/html --host 0.0.0.0 --port 8000"
