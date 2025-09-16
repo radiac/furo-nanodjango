@@ -2,7 +2,7 @@
 
 {%- block body -%}
 <nanodjango>
-  <nanodjango-header>
+  <header>
     <div class="header-nav">
       <div>
         <h1><a href="https://nanodjango.dev/"><img src="{{ pathto('_static/logo.svg', 1) }}" alt="nanodjango"></a></h1>
@@ -12,9 +12,9 @@
           <label for="nav-toggle" class="toggle icon"></label>
           <ul>
             <li><a href="https://docs.nanodjango.dev/" class="active">docs</a></li>
-            <li><a href="https://nanodjango.dev/playground/">playground</a></li>
+            <li><a href="https://nanodjango.dev/play/">playground</a></li>
             <li><a href="https://nanodjango.dev/blog/">blog</a></li>
-            <li><a href="https://github.com/radiac/nanodjango" target="_blank">github ↗</a></li>
+            <li><a href="https://github.com/radiac/nanodjango" target="_blank">github<span aria-hidden="true"> ↗</span></a></li>
           </ul>
         </nav>
       </div>
@@ -41,7 +41,7 @@
     
 
     
-  </nanodjango-header>
+  </header>
 </nanodjango>
 {{ super() }}
 {%- endblock -%}
